@@ -26,3 +26,9 @@ body {
 h1, h2, h3, h4, h5 {
   font-family: 'Cormorant', serif;
 }
+
+@media screen and (max-width:1024px) {
+  body {
+    overflow-x: hidden;
+  }
+}

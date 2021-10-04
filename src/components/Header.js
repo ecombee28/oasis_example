@@ -16,26 +16,39 @@ const Header = () => {
     <div>
       <div className="header">
         <img src={Logo} alt="" className="logo" />
+
+        <nav className={`nav`}>
+          <ul className={`nav_list  ${mobile ? `show ` : `hide`}`}>
+            <div className="hamburger" onClick={openNavMenu}>
+              <div className="hamburger-block">X</div>
+            </div>
+            <li className={`nav-link ${mobile ? `fade-in` : `fade-out`}`}>
+              About
+            </li>
+            <li className={`nav-link ${mobile ? `fade-in` : `fade-out`}`}>
+              Sermons
+            </li>
+            <li className={`nav-link ${mobile ? `fade-in` : `fade-out`}`}>
+              Contact
+            </li>
+            <li className={`nav-link ${mobile ? `fade-in` : `fade-out`}`}>
+              Give
+            </li>
+            <div className="social-nav-links-wrapper">
+              <li className={`nav-link ${mobile ? `fade-in` : `fade-out`}`}>
+                <FontAwesomeIcon icon={faFacebook} className="icon" />
+              </li>
+              <li className={`nav-link ${mobile ? `fade-in` : `fade-out`}`}>
+                <FontAwesomeIcon icon={faYoutube} className="icon" />
+              </li>
+            </div>
+          </ul>
+        </nav>
         <div className="hamburger" onClick={openNavMenu}>
-          <p>Menu</p>
           <div className="hamburger-block"></div>
           <div className="hamburger-block"></div>
           <div className="hamburger-block"></div>
         </div>
-        <nav className={`nav ${mobile ? `show` : `hide`}`}>
-          <ul className="nav_list">
-            <li className="nav-link">About</li>
-            <li className="nav-link">Sermons</li>
-            <li className="nav-link">Contact</li>
-            <li className="nav-link">Give</li>
-            <li className="facebook">
-              <FontAwesomeIcon icon={faFacebook} className="icon" />
-            </li>
-            <li className="youtube">
-              <FontAwesomeIcon icon={faYoutube} className="icon" />
-            </li>
-          </ul>
-        </nav>
       </div>
     </div>
   );
